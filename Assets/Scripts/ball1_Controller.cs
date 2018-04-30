@@ -18,20 +18,28 @@ public class ball1_Controller : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		pos = this.transform.localPosition;
+		//縦の跳ね返り
 		if ((pos.y <= -5f || pos.y >= 5f) && !outflug) {
 			rb.velocity = new Vector3 (rb.velocity.x, -rb.velocity.y, rb.velocity.z);
 			outflug = true;
 		}
+		//横の跳ね返り
 		if (pos.x <= -10f && !outflug) {
 			rb.velocity = new Vector3 (-rb.velocity.x, rb.velocity.y, rb.velocity.z);
 			outflug = true;
 		}
+		//画面外でのkill
+		if(pos.x >= 15){
+			Destroy(this.gameObject);
+		}
+		//outflugは画面外に飛び出て跳ね返りがうまくいかないときの対処
 		if (!(pos.y <= -5f || pos.y >= 5f) && !(pos.x <= -10f || pos.x >= 10f)) {
 			outflug = false;
 		}
 	}
 
 	void OnCollisionEnter (Collision collision) {
+		//スコアをつけてブロックを消す
 		if (collision.gameObject.tag == "block") {
 			stext.GetComponent<score_text1> ().score++;
 			Destroy (collision.gameObject);
@@ -39,6 +47,7 @@ public class ball1_Controller : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter (Collider collider) {
+		//ミサイルが当たったボールはランダムに動く
 		if (collider.gameObject.tag == "missile2") {
 			Destroy (collider.gameObject);
 			System.Random r = new System.Random();

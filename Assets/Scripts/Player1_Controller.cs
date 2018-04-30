@@ -13,6 +13,7 @@ public class Player1_Controller : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		//ミサイルを一定間隔での発射
 		count++;
 
 		transform.localPosition = pos;

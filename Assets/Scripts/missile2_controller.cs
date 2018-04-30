@@ -14,6 +14,7 @@ public class missile2_controller : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		//画面外でのkill
 		if(this.transform.localPosition.x >= 12){
 			Destroy(this.gameObject);
 		}
