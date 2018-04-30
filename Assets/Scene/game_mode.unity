@@ -4140,7 +4140,7 @@ GameObject:
   - component: {fileID: 1764905919}
   m_Layer: 0
   m_Name: player2
-  m_TagString: Untagged
+  m_TagString: player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4411,6 +4411,10 @@ Prefab:
     - target: {fileID: 4068501728170462, guid: 3d3192b7ea3ba4f5a8b59932af98222d, type: 2}
       propertyPath: m_LocalScale.x
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381191499742058, guid: 3d3192b7ea3ba4f5a8b59932af98222d, type: 2}
+      propertyPath: m_TagString
+      value: player1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65807547793456664, guid: 3d3192b7ea3ba4f5a8b59932af98222d, type: 2}

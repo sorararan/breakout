@@ -7,6 +7,10 @@ TagManager:
   - ball
   - wall
   - block
+  - player1
+  - player2
+  - missile1
+  - missile2
   layers:
   - Default
   - TransparentFX
