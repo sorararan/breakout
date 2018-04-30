@@ -12,7 +12,7 @@ public class ball1_Controller : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody>();
-		rb.AddForce(transform.right * speed, ForceMode.VelocityChange);
+		rb.AddForce(new Vector3(0.5f, 0.2f, 0) * speed, ForceMode.VelocityChange);
 	}
 	
 	// Update is called once per frame
