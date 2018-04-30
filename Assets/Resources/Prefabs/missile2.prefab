@@ -22,10 +22,10 @@ GameObject:
   - component: {fileID: 212616841353948898}
   - component: {fileID: 54932532641998310}
   - component: {fileID: 136761221667240616}
-  - component: {fileID: 114817220627270622}
+  - component: {fileID: 114503881827208100}
   m_Layer: 0
   m_Name: missile2
-  m_TagString: Untagged
+  m_TagString: missile2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,7 +58,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114817220627270622
+--- !u!114 &114503881827208100
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1651112621593402}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76e79469308f44b6da47edc1130651ea, type: 3}
+  m_Script: {fileID: 11500000, guid: f19f562fd47ab436687881e1a7c9ca3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!136 &136761221667240616
@@ -117,7 +117,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ec252d081a9334aa8908cf3f31de521b, type: 3}
-  m_Color: {r: 0.9789555, g: 0, b: 0.99264705, a: 1}
+  m_Color: {r: 0, g: 0.99264705, b: 0.45867145, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
