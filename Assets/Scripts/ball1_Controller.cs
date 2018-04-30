@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ball1_Controller : MonoBehaviour {
-	float speed = 10.0f;
+	float speed = 13.0f;
 	Vector3 pos;
 	Rigidbody rb;
 	bool outflug = false;
