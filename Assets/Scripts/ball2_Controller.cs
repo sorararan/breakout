@@ -50,7 +50,7 @@ public class ball2_Controller : MonoBehaviour {
 		//ミサイルが当たったボールはランダムに動く
 		if (collider.gameObject.tag == "missile1") {
 			Destroy (collider.gameObject);
-			System.Random r = new System.Random(1000);
+			System.Random r = new System.Random();
 			float r1 = (float)r.Next(2);
 			float r2 = (float)r.Next(2);
 			rb.AddForce(new Vector3(r1, r2, 0) * speed, ForceMode.VelocityChange);
