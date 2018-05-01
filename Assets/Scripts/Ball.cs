@@ -32,17 +32,24 @@ public class Ball : MonoBehaviour {
             is_out = true;
         }
         //横の跳ね返り
-        if (position.x <= -10f && !is_out)
-        {
-            rigid_body.velocity = new Vector3(-rigid_body.velocity.x, rigid_body.velocity.y, rigid_body.velocity.z);
-            is_out = true;
+        //プレイヤ1の玉は左端(敵側)で跳ね返り、右端(自陣側)は跳ね返らない、プレイヤ2の玉は右端で跳ね返り、左端では跳ね返らない
+        if(id == 0){
+            if (position.x <= -10f && !is_out){
+                rigid_body.velocity = new Vector3(-rigid_body.velocity.x, rigid_body.velocity.y, rigid_body.velocity.z);
+                is_out = true;
+            }
+        }else{
+            if(position.x >= 10f && !is_out){
+                rigid_body.velocity = new Vector3(-rigid_body.velocity.x, rigid_body.velocity.y, rigid_body.velocity.z);
+                is_out = true;
+            }
         }
         //画面外でのkill
-        if (position.x >= 15)
+        if (System.Math.Abs(position.x) >= 15)
         {
             Destroy(this.gameObject);
         }
-        //outflugは画面外に飛び出て跳ね返りがうまくいかないときの対処
+        //is_flugは画面外に飛び出て跳ね返りがうまくいかないときの対処
         if (!(position.y <= -5f || position.y >= 5f) && !(position.x <= -10f || position.x >= 10f))
         {
             is_out = false;

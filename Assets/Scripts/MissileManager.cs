@@ -25,8 +25,8 @@ public class MissileManager : MonoBehaviour {
     // Use this for initialization
     void Start () {
         missile_prehabs = new GameObject[2];
-		missile_prehabs[0] = (GameObject)Resources.Load("Prefabs/missile1");
-        missile_prehabs[1] = (GameObject)Resources.Load("Prefabs/missile2");
+		missile_prehabs[0] = (GameObject)Resources.Load("Prefabs/missile0");
+        missile_prehabs[1] = (GameObject)Resources.Load("Prefabs/missile1");
     }
 
     // Update is called once per frame

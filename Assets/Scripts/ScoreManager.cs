@@ -24,15 +24,6 @@ public class ScoreManager : MonoBehaviour {
         return instance;
     }
 
-	// Use this for initialization
-	void Start () {
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
     public void setScore(int id, int score)
     {
         score_texts[id].text = ScoreUtils.FixedScoreString(id, score);
@@ -49,6 +40,6 @@ public class ScoreUtils
 {
     public static string FixedScoreString(int id, int score)
     {
-        return "player" + (id+1).ToString() + ":" + score.ToString() + "点";
+        return "player" + id.ToString() + ":" + score.ToString() + "点";
     }
 }
