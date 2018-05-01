@@ -35,7 +35,7 @@ public class ScoreManager : MonoBehaviour {
 
     public void setScore(int id, int score)
     {
-        score_texts[id].text = Score.FixedScoreString(id, score);
+        score_texts[id].text = ScoreUtils.FixedScoreString(id, score);
         scores[id] = score;
     }
 
@@ -45,7 +45,7 @@ public class ScoreManager : MonoBehaviour {
     }
 }
 
-public class Score
+public class ScoreUtils
 {
     public static string FixedScoreString(int id, int score)
     {
