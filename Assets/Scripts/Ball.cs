@@ -26,7 +26,7 @@ public class Ball : MonoBehaviour {
     {
         Vector3 position = transform.localPosition;
         //縦の跳ね返り
-        if ((position.y <= -5f || position.y >= 5f) && !is_out)
+        if ((position.y <= -6.5f || position.y >= 6.5f) && !is_out)
         {
             rigid_body.velocity = new Vector3(rigid_body.velocity.x, -rigid_body.velocity.y, rigid_body.velocity.z);
             is_out = true;
@@ -50,7 +50,7 @@ public class Ball : MonoBehaviour {
             Destroy(this.gameObject);
         }
         //is_flugは画面外に飛び出て跳ね返りがうまくいかないときの対処
-        if (!(position.y <= -5f || position.y >= 5f) && !(position.x <= -10f || position.x >= 10f))
+        if (!(position.y <= -6.5f || position.y >= 6.5f) && !(position.x <= -10f || position.x >= 10f))
         {
             is_out = false;
         }
